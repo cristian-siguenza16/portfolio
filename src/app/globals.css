@@ -4,6 +4,7 @@
 
 .border-gradient {
     position: relative;
+    box-sizing: border-box;
     padding: 1.3rem;
     backdrop-filter: blur(10px);
     border-radius: 0.75rem;
@@ -18,4 +19,42 @@
     background: linear-gradient(to right, darkblue, darkorchid) border-box;
     mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
     mask-composite: exclude;
+    z-index: -1;
 }
+
+.neon-text {
+    animation: flicker 1.5s infinite alternate;
+    color: #fff;
+
+    border: 0.2rem solid #fff;
+    border-radius: 1rem;
+    padding: 0.4em;
+    box-shadow: 0 0 .2rem #fff,
+        0 0 .2rem #fff,
+        0 0 2rem #bc13fe,
+        0 0 0.8rem #bc13fe,
+        0 0 2.8rem #bc13fe,
+        inset 0 0 1.3rem #bc13fe;
+}
+
+/* Flickering animation */
+@keyframes flicker {
+    
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+  
+        text-shadow:
+        0 0 4px #fff,
+        0 0 11px #fff,
+        0 0 19px #fff,
+        0 0 40px rgb(255, 0, 0),
+        0 0 80px rgb(255, 0, 0),
+        0 0 90px rgb(255, 0, 0),
+        0 0 100px rgb(255, 0, 0),
+        0 0 150px rgb(255, 0, 0);
+    
+    }
+    
+    20%, 24%, 55% {        
+        text-shadow: none;
+    }    
+  }

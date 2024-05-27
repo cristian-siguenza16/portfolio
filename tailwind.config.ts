@@ -13,6 +13,9 @@ const config: Config = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      zIndex: {
+        '5': '5',
+      },
       colors: {
         neon: '#39ff14', // Color neón
       },

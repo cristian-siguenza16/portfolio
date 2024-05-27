@@ -52,10 +52,10 @@ const Navigation = () => {
             {NavLinks.map((nav) => (
                 <Link key={nav.name} href={nav.link} className="flex items-center space-x-2 text-xl">
                     <nav.icon
-                        className={`w-8 h-8 ${path === nav.link ? "text-purple-800" : "text-white"
+                        className={`w-8 h-8 ${path === nav.link ? "text-indigo-400" : "text-white"
                             }`}
                     />
-                    <span className={path === nav.link ? "text-purple-800" : "text-white"}>
+                    <span className={path === nav.link ? "bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent" : "text-white"}>
                         {nav.text}
                     </span>
                 </Link>
