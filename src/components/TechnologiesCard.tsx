@@ -65,7 +65,7 @@ export default function TechnologiesCard() {
         });
     };
 
-    const handelPreviusTech = () => {
+    const handelPreviousTech = () => {
         setTechList((prevState) => {
             if (prevState === 0) {
                 return prevState = 4;
@@ -74,31 +74,35 @@ export default function TechnologiesCard() {
         });
     };
     return (
-        <div className="flex items-center justify-between mb-4 py-6">
-            <button className="ml-2 hover:-translate-y-1 hover:scale-110" onClick={handelPreviusTech}>
-                <GrPrevious className="w-12 h-12" />
+        <div className="flex flex-row items-center justify-between mb-4 py-6 md:space-y-0">
+            <button className="ml-2 hover:-translate-y-1 hover:scale-110" onClick={handelPreviousTech}>
+                <GrPrevious className="w-8 h-8 md:w-12 md:h-12" />
             </button>
-            <div className="flex flex-col items-start">
-                <h3 className="text-lg font-bold mb-4">{allTechnologies[countTech].title}</h3>
-                <div className="flex space-x-4 items-center justify-center">
+            <div className="flex flex-col items-center md:items-start">
+                <h3 className="text-base md:text-lg font-bold mb-4 text-center md:text-left">{allTechnologies[countTech].title}</h3>
+                <div className="grid grid-cols-2 gap-2 md:flex md:flex-wrap md:space-x-4  items-center justify-center w-full">
                     {allTechnologies[countTech].technologies.map((tech, index) => (
-                        <div key={index} className="w-32 h-32 border border-white rounded-lg bg-gray-500 bg-opacity-75 flex flex-col items-center justify-center gap-2 hover:scale-110">
-                            <Image src={tech.image} alt={tech.name} width={48} height={48} className="object-fill w-16 h-16 rounded-md mx-auto" />
-                            <p className="text-sm">{tech.name}</p>
+                        <div key={index} className="w-24 h-24 md:w-32 md:h-32 border border-white rounded-lg bg-gray-500 bg-opacity-75 flex flex-col items-center justify-center gap-2 hover:scale-110">
+                            <Image src={tech.image} alt={tech.name} width={48} height={48} className="object-fill w-12 h-12 md:w-16 md:h-16 rounded-md mx-auto" />
+                            <p className="text-xs md:text-sm">{tech.name}</p>
                         </div>
                     ))}
                 </div>
             </div>
             <button className="mr-2 hover:translate-y-1 hover:scale-110" onClick={handleNextTech}>
-                <GrNext className="w-12 h-12" />
+                <GrNext className="w-8 h-8 md:w-12 md:h-12" />
             </button>
-            <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
-                <button type="button" className={`w-3 h-3 rounded-full ${countTech === 0 ? "bg-white" : "bg-gray-500"}`} onClick={() => { setTechList(0); }} />
-                <button type="button" className={`w-3 h-3 rounded-full ${countTech === 1 ? "bg-white" : "bg-gray-500"}`} onClick={() => { setTechList(1); }} />
-                <button type="button" className={`w-3 h-3 rounded-full ${countTech === 2 ? "bg-white" : "bg-gray-500"}`} onClick={() => { setTechList(2); }} />
-                <button type="button" className={`w-3 h-3 rounded-full ${countTech === 3 ? "bg-white" : "bg-gray-500"}`} onClick={() => { setTechList(3); }} />
-                <button type="button" className={`w-3 h-3 rounded-full ${countTech === 4 ? "bg-white" : "bg-gray-500"}`} onClick={() => { setTechList(4); }} />
+            <div className="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-1 md:space-x-3 rtl:space-x-reverse">
+                {[...Array(5)].map((_, index) => (
+                    <button
+                        key={index}
+                        type="button"
+                        className={`w-2 h-2 md:w-3 md:h-3 rounded-full ${countTech === index ? "bg-white" : "bg-gray-500"}`}
+                        onClick={() => { setTechList(index); }}
+                    />
+                ))}
             </div>
         </div>
     );
+
 }
