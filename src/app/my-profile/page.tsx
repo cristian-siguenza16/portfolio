@@ -12,12 +12,12 @@ export default function page() {
                             <p><strong>Languages:</strong></p>
                             <ul className="ml-4 list-disc">
                                 <li>Native Spanish</li>
-                                <li>English B1+</li>
+                                <li>{`English B1+`}</li>
                             </ul>
                             <p><strong>Education:</strong></p>
                             <ul className="ml-4 list-disc">
-                                <li>Computer Science and Systems Engineering <br />Rafael Landívar University <br />(2020 - Currently studying the final year of the degree)</li>
-                                <li>English B1+ <br />IGA (National American Institute) <br />(2014-2015)</li>
+                                <li>Computer Science and Systems Engineering <br />Rafael Landívar University <br /> {`(2020 - Currently studying the final year of the degree)`}</li>
+                                <li>{`English B1+`} <br />{`IGA (National American Institute)`}<br />{`2014-2015`}</li>
                             </ul>
                             <p><strong>Skills:</strong></p>
                             <ul className="ml-4 list-disc">
@@ -30,7 +30,7 @@ export default function page() {
                         <div className="flex flex-col gap-4 py-3 z-[30] w-full md:w-1/2">
                             <p><strong>Work Experience:</strong></p>
                             <ul className="ml-4 list-disc">
-                                <li>Bootcamp, Cari Latin America (2023 - 1 month)</li>
+                                <li>{`Bootcamp, Cari Latin America (2023 - 1 month)`}</li>
                                 <li>In this bootcamp, I developed the ability to communicate and work with people I didn't know and to carry out a project with filament, Laravel, PHP. My role was to develop the sales history module and statistics for the same module.</li>
                             </ul>
                             <p><strong>Hobbies:</strong></p>
