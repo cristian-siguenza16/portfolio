@@ -31,7 +31,7 @@ export default function page() {
                             <p><strong>Work Experience:</strong></p>
                             <ul className="ml-4 list-disc">
                                 <li>{`Bootcamp, Cari Latin America (2023 - 1 month)`}</li>
-                                <li>In this bootcamp, I developed the ability to communicate and work with people I didn't know and to carry out a project with filament, Laravel, PHP. My role was to develop the sales history module and statistics for the same module.</li>
+                                <li>{`In this bootcamp, I developed the ability to communicate and work with people I didn't know and to carry out a project with filament, Laravel, PHP. My role was to develop the sales history module and statistics for the same module.`}</li>
                             </ul>
                             <p><strong>Hobbies:</strong></p>
                             <ul className="ml-4 list-disc">
