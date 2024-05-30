@@ -1,12 +1,10 @@
-import { useState } from "react";
 import Image from "next/image";
 import ButtonCopyClipboard from "@/components/ButtonCopyClipboard";
-import { title } from "process";
-import { GrNext, GrPrevious } from "react-icons/gr";
 import Link from "next/link";
 import ProjectCard from "@/components/ProjectCard";
 import BlogCard from "@/components/BlogCard";
 import TechnologiesCard from "@/components/TechnologiesCard";
+import AboutMeCard from "@/components/AboutMeCard";
 
 
 /*{ style={{ backgroundImage: "url(/bg-home1.jpg)" }} } 
@@ -45,30 +43,15 @@ import TechnologiesCard from "@/components/TechnologiesCard";
 */
 
 export default function Home() {
-  const emailText = "csiguenzavelasquez@gmail.com";
 
   return (
     <main>
       <div className="flex justify-center items-center w-full min-h-screen bg-cover bg-center font-mono" style={{ backgroundImage: "url(/bg-home.jpg)" }}>
         <div className="flex-col items-center">
           <h1 className="text-7xl my-10 text-center p-4 md-4 max-w-5xl neon-text bg-black bg-opacity-95">FULL STACK DEVELOPER</h1>
-          <section id="about-me" className="border-gradient rounded-xl my-8 p-4 md-4 w-screen max-w-5xl relative bg-black bg-opacity-75 text-white">
+          <section id="about-me" className="relative border-gradient rounded-xl my-8 p-4 md-4 w-screen max-w-5xl bg-black bg-opacity-75 text-white">
             <h2 className="text-2xl font-bold absolute -top-3 left-4 px-4">ABOUT ME!</h2>
-            <div className="flex flex-col md:flex-row">
-              <div className="w-full md:w-1/3 flex justify-center items-center my-6 md:mb-0">
-                <Image src="/perfil.jpeg" alt="Perfil" width={240} height={240} className="rounded-xl" />
-              </div>
-              <div className="w-full md:w-2/3 p-3 mt-7 mr-6 space-y-4 text-xl">
-                <p>Hi, my name is Cristian Siguenza. I am a full stack developer. At 22 years old, I am a computer and information engineer who loves challenges and learning independently. I enjoy programming both backend and frontend. Additionally, I am fascinated by networks, telecommunications, and microcomponents...</p>
-              </div>
-            </div>
-            <div className="flex justify-between items-center mt-6">
-              <div className="flex items-center gap-4 text-xl">
-                <p><strong>EMAIL:</strong> {emailText}</p>
-                <ButtonCopyClipboard text={emailText} />
-              </div>
-              <button className="border border-white bg-gray-800 bg-gradient-to-r f hover:from-indigo-500 via-purple-500 hover:to-pink-500  p-2 rounded-md justify-self-end">MORE INFORMATION</button>
-            </div>
+            <AboutMeCard />
           </section>
 
           {/* TECHNOLOGIES SECTION */}
@@ -81,17 +64,17 @@ export default function Home() {
           <section id="projects" className="border-gradient rounded-xl my-10 p-4 w-full max-w-5xl bg-black bg-opacity-75 text-white relative">
             <h2 className="text-2xl font-bold absolute -top-3 left-4 px-4">PROJECTS</h2>
             <div className="space-y-4 m-6 text-xl">
-              <ProjectCard title="Dead Run"
-                description="It's a platform game, with a multiplayer option for up to 4 players, 3 different worlds where each player has 3 lives and there are objects such as extra lives, diamonds that increase points and mysterious boxes that give powers to the player who caches it, the players They compete to reach the goal of each world, depending on where they arrive they obtain points that accumulate and at the end of the 3 worlds they know who is the winner of the game. In this project I was a third world developer, both backend and frontend, and I was also the project manager."
+              <ProjectCard id="1" title="Dead Run"
+                description="Platform game project, with a multiplayer option for up to 4 players, 3 different worlds and objects, the players They compete to reach the goal of each world, at the end of the 3 worlds they know who is the winner of the game. In this project I was a third world developer, both backend and frontend, and I was also the project manager."
                 technologies="Python, Git, Windows, PyCharm"
               />
-              <ProjectCard title="Megatubos"
+              <ProjectCard id="2" title="Megatubos"
                 description="It's a software made to measure for the megatube company, the application is developed in C# and has several modules that help the company to have control over its sales, products, customers, sales history and has a charts section. where you can view the best-selling product and the customer with the most purchases in the month.
               My role was to perform the CRUD for each module and perform the data analysis for the chart, as well as project manager."
                 technologies="C#, Git, Windows, Visual Studio"
               />
               <div className="flex justify-end">
-                <Link href="/my-projects" className="border border-white bg-gray-800 hover:bg-gray-700 p-2 rounded-md text-lg">MORE PROJECTS</Link>
+                <Link href="/my-projects" className="border border-white bg-gray-800 bg-gradient-to-r hover:from-indigo-500 via-purple-500 hover:to-pink-500 p-2 rounded-md">MORE PROJECTS</Link>
               </div>
             </div>
           </section>
@@ -104,7 +87,7 @@ export default function Home() {
                 description="In the modern era, the term 'Internet of Things' (IoT) has emerged as one of the most promising and transformative trends in the technological field. But what exactly is IoT and why is it so important in the evolution of today's world?..."
               />
               <div className="flex justify-end">
-                <Link href="/my-blog" className="border border-white bg-gray-800 hover:bg-gray-700 p-2 rounded-md text-lg">READ BLOG</Link>
+                <Link href="/my-blog" className="border border-white bg-gray-800 bg-gradient-to-r hover:from-indigo-500 via-purple-500 hover:to-pink-500 p-2 rounded-md">READ BLOG</Link>
               </div>
             </div>
           </section>

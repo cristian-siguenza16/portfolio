@@ -39,22 +39,55 @@
 
 /* Flickering animation */
 @keyframes flicker {
-    
-    0%, 18%, 22%, 25%, 53%, 57%, 100% {
-  
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+
         text-shadow:
-        0 0 4px #fff,
-        0 0 11px #fff,
-        0 0 19px #fff,
-        0 0 40px rgb(255, 0, 0),
-        0 0 80px rgb(255, 0, 0),
-        0 0 90px rgb(255, 0, 0),
-        0 0 100px rgb(255, 0, 0),
-        0 0 150px rgb(255, 0, 0);
-    
+            0 0 4px #fff,
+            0 0 11px #fff,
+            0 0 19px #fff,
+            0 0 40px rgb(255, 0, 0),
+            0 0 80px rgb(255, 0, 0),
+            0 0 90px rgb(255, 0, 0),
+            0 0 100px rgb(255, 0, 0),
+            0 0 150px rgb(255, 0, 0);
+
     }
-    
-    20%, 24%, 55% {        
+
+    20%,
+    24%,
+    55% {
         text-shadow: none;
-    }    
-  }
+    }
+}
+
+.flip-card-inner {
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.flip-card-front-relative,
+.flip-card-back-relative {
+    position: relative;
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.flip-card-back-relative {
+    transform: rotateY(180deg);
+}

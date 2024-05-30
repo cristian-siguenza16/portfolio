@@ -82,7 +82,7 @@ export default function TechnologiesCard() {
                 <h3 className="text-lg font-bold mb-4">{allTechnologies[countTech].title}</h3>
                 <div className="flex space-x-4 items-center justify-center">
                     {allTechnologies[countTech].technologies.map((tech, index) => (
-                        <div key={index} className="w-32 h-32 border border-white rounded-lg bg-gray-500 bg-opacity-75 flex flex-col items-center justify-center gap-2 hover:animate-bounce">
+                        <div key={index} className="w-32 h-32 border border-white rounded-lg bg-gray-500 bg-opacity-75 flex flex-col items-center justify-center gap-2 hover:scale-110">
                             <Image src={tech.image} alt={tech.name} width={48} height={48} className="object-fill w-16 h-16 rounded-md mx-auto" />
                             <p className="text-sm">{tech.name}</p>
                         </div>
