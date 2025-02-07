@@ -16,7 +16,7 @@ export default function page() {
                             </ul>
                             <p><strong>Education:</strong></p>
                             <ul className="ml-4 list-disc">
-                                <li>Computer Science and Systems Engineering <br />Rafael Landívar University <br /> {`(2020 - Currently studying the final year of the degree)`}</li>
+                                <li>Computer Science and Systems Engineering <br />Rafael Landívar University <br /> {`(2020 - I currently finished courses in the career)`}</li>
                                 <li>{`English B1+`} <br />{`IGA (National American Institute)`}<br />{`2014-2015`}</li>
                             </ul>
                             <p><strong>Skills:</strong></p>
@@ -32,6 +32,10 @@ export default function page() {
                             <ul className="ml-4 list-disc">
                                 <li>{`Bootcamp, Cari Latin America (2023 - 1 month)`}</li>
                                 <li>{`In this bootcamp, I developed the ability to communicate and work with people I didn't know and to carry out a project with filament, Laravel, PHP. My role was to develop the sales history module and statistics for the same module.`}</li>
+                            </ul>
+                            <ul className="ml-4 list-disc">
+                                <li>{`Pixela, (Currently working from June 2024)`}</li>
+                                <li>{`In this company I have the frontend developer role, making designs and interfaces for applications`}</li>
                             </ul>
                             <p><strong>Hobbies:</strong></p>
                             <ul className="ml-4 list-disc">
