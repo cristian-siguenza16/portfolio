@@ -16,7 +16,7 @@ export default function AboutMeCard() {
                         <Image src="/perfil.jpeg" alt="Perfil" width={240} height={240} className="rounded-xl" />
                     </div>
                     <div className="w-full md:w-2/3 p-3 mt-7 md:mt-0 md:mr-6 space-y-4 text-lg md:text-xl">
-                        <p>Hi, my name is Cristian Sigüenza. I am a full stack developer. At 22 years old, I am a computer and information engineer who loves challenges and learning independently. I enjoy programming both backend and frontend. Additionally, I am fascinated by networks, telecommunications, and microcomponents...</p>
+                        <p>Hi, my name is Cristian Sigüenza. I am a full stack developer currently working at the pixela company. At 23 years old, I am a computer and information engineer who loves challenges and learning independently. I enjoy programming both backend and frontend. Additionally, I am fascinated by networks, telecommunications, and microcomponents...</p>
                     </div>
                 </div>
                 <div className="flex flex-col md:flex-row justify-between items-center mt-6 space-y-4 md:space-y-0">
